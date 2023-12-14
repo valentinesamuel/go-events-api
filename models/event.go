@@ -5,10 +5,10 @@ import "time"
 type Event struct {
 	ID          int      
 	Name       string    `binding:"required"`
-	Location    string    `binding:"required"`
-	EndDate     time.Time `binding:"required"`
-	StartDate   time.Time `binding:"required"`
 	Description string    `binding:"required"`
+	Location    string    `binding:"required"`
+	StartDate   time.Time `binding:"required"`
+	EndDate     time.Time `binding:"required"`
 	UserId      int       
 }
 
