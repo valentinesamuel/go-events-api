@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"example.com/events-rest-api/models"
+	"example.com/events-rest-api/utils"
 	"github.com/gin-gonic/gin"
 )
 
@@ -35,5 +36,12 @@ func login(context *gin.Context) {
 		context.JSON(http.StatusUnauthorized, gin.H{"error": "Could not validate credentials"})
 		return
 	}
-	context.JSON(http.StatusOK, gin.H{"message": "User logged in successfully"})
+
+	token, err := utils.GenerateToken(user.Email, user.ID)
+	if err != nil {
+		context.JSON(http.StatusInternalServerError, gin.H{"error": "Could not generate token"})
+		return
+	}
+
+	context.JSON(http.StatusOK, gin.H{"message": "User logged in successfully", "token": token})
 }
