@@ -1,11 +1,11 @@
 POST http://localhost:8080/events
 Content-Type: : application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxhcGlvQHZvLnV5IiwiZXhwIjoxNzAyNzU5NDIwLCJ1c2VySWQiOjJ9.eTe8gJF6wgL1tiJvJEOyC4LFh4l_MA30gw5XbYfqg6g
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InR3ZXdlc3RAdm8udXkiLCJleHAiOjE3MDI3NjExOTgsInVzZXJJZCI6MX0.r7L3FETHmX2Nk8VS2zbheJ_bodGjVRjQTkcg-civ9QA
 
 {
-    "description": "New Test event description",
+    "description": "4 description",
     "startDate": "2020-01-01T00:00:00.000Z",
     "endDate": "2020-03-01T00:00:00.000Z",
-    "location": "New Test location",
-    "name": "New Test title"
+    "location": "4 location",
+    "name": "4 title"
 }

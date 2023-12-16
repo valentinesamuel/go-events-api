@@ -2,6 +2,6 @@ POST http://localhost:8080/login
 Content-Type: : application/json
 
 {
-      "email": "lapio@vo.uy",
-    "password": "password"
+      "email": "twewest@vo.uy",
+    "password": "test"
 }

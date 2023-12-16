@@ -13,7 +13,7 @@ type User struct {
 	Password string `binding:"required"`
 }
 
-func (u User) Save() error {
+func (u *User) Save() error {
 	query := `
 	INSERT INTO users (email, password)
 	VALUES (?, ?)
@@ -32,7 +32,7 @@ func (u User) Save() error {
 	if err != nil {
 		return err
 	}
-	userId, err := result.LastInsertId() // Get the ID of the inserted row
+	userId, err := result.LastInsertId()
 	u.ID = userId
 	return err
 }
